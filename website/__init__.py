@@ -1,7 +1,6 @@
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
-import mysql.connector
-from os import path
+# from os import path
 from flask_login import LoginManager
 
 db = SQLAlchemy()
@@ -36,7 +35,7 @@ def create_app():
     return app
 
 
-def create_database(app):
-    if not path.exists('website/' + DB_NAME):
-        db.create_all(app=app)
-        print('Created Database!')
+# def create_database(app):
+    # if not path.exists('website/' + DB_NAME):
+    #     db.create_all(app=app)
+    #     print('Created Database!')
